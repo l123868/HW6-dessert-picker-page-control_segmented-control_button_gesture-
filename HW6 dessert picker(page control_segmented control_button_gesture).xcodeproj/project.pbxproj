@@ -13,6 +13,7 @@
 		D27F538A27E9FE3900F39C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27F538827E9FE3900F39C8D /* Main.storyboard */; };
 		D27F538C27E9FE3E00F39C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27F538B27E9FE3E00F39C8D /* Assets.xcassets */; };
 		D27F538F27E9FE3E00F39C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27F538D27E9FE3E00F39C8D /* LaunchScreen.storyboard */; };
+		D27F539727EA00C200F39C8D /* DessertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F539627EA00C200F39C8D /* DessertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D27F538B27E9FE3E00F39C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D27F538E27E9FE3E00F39C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D27F539027E9FE3E00F39C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D27F539627EA00C200F39C8D /* DessertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		D27F538127E9FE3900F39C8D /* HW6 dessert picker(page control_segmented control_button_gesture) */ = {
 			isa = PBXGroup;
 			children = (
+				D27F539627EA00C200F39C8D /* DessertViewController.swift */,
 				D27F538227E9FE3900F39C8D /* AppDelegate.swift */,
 				D27F538427E9FE3900F39C8D /* SceneDelegate.swift */,
 				D27F538627E9FE3900F39C8D /* ViewController.swift */,
@@ -141,6 +144,7 @@
 				D27F538727E9FE3900F39C8D /* ViewController.swift in Sources */,
 				D27F538327E9FE3900F39C8D /* AppDelegate.swift in Sources */,
 				D27F538527E9FE3900F39C8D /* SceneDelegate.swift in Sources */,
+				D27F539727EA00C200F39C8D /* DessertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
