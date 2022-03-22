@@ -27,7 +27,7 @@ class DessertViewController: UIViewController {
         syncChoose()
     }
     
-    @IBAction func toLeftDessert(_ sender: Any) {
+    @IBAction func toLeftDessert() {
         if choose > 0{
             choose -= 1
         }else{
@@ -35,7 +35,7 @@ class DessertViewController: UIViewController {
         }
         syncChoose()
     }
-    @IBAction func toRightDessert(_ sender: Any) {
+    @IBAction func toRightDessert() {
         if choose < 2{
             choose += 1
         }else{
@@ -45,12 +45,20 @@ class DessertViewController: UIViewController {
     }
 
     
-    @IBAction func changeChooseBySegmentControl(_ sender: Any) {
-        choose = dessertSegmentControl.selectedSegmentIndex
+    @IBAction func changeChooseBySegmentControl(_ sender: UISegmentedControl) {
+        choose = sender.selectedSegmentIndex
         syncChoose()
     }
-    @IBAction func changeChooseByPageControl(_ sender: Any) {
-        choose = dessertPageControl.currentPage
+    @IBAction func changeChooseByPageControl(_ sender: UIPageControl) {
+        choose = sender.currentPage
+        syncChoose()
+    }
+    @IBAction func swipePicture(_ sender: UISwipeGestureRecognizer) {
+        if sender.direction == .right{
+            toRightDessert()
+        }else if sender.direction == .left{
+            toLeftDessert()
+        }
         syncChoose()
     }
     func syncChoose(){

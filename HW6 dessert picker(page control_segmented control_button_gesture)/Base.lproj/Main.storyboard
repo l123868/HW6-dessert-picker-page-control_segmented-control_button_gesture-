@@ -16,9 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-TC-xCN" userLabel="theDessert">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-TC-xCN" userLabel="theDessert">
                                 <rect key="frame" x="-3" y="153" width="417" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vZ0-TJ-o9l" appends="YES" id="T8O-4b-Ag7"/>
+                                    <outletCollection property="gestureRecognizers" destination="gnm-C1-8KN" appends="YES" id="Zg5-KG-hqM"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nameOfDessert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owC-Ss-mq3">
                                 <rect key="frame" x="91" y="427" width="245" height="43"/>
@@ -36,25 +41,25 @@
                                     <segment title=""/>
                                 </segments>
                                 <connections>
-                                    <action selector="changeChoose:" destination="BYZ-38-t0r" eventType="valueChanged" id="glJ-rz-4qS"/>
+                                    <action selector="changeChooseBySegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="H6y-Pb-WOW"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdl-Cx-Ba3">
-                                <rect key="frame" x="309" y="574" width="67" height="31"/>
+                                <rect key="frame" x="320" y="574" width="46" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system"/>
                                 <connections>
-                                    <action selector="toRightDessert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9X7-1o-7A6"/>
+                                    <action selector="toRightDessert" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIG-ax-9c3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJW-gq-G2l">
-                                <rect key="frame" x="32" y="574" width="67" height="31"/>
+                                <rect key="frame" x="43" y="574" width="46" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
                                 <connections>
-                                    <action selector="toLeftDessert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RfN-gk-HHH"/>
+                                    <action selector="toLeftDessert" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAC-9Q-mPr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lO-36-rU4">
@@ -86,11 +91,23 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="vZ0-TJ-o9l">
+                    <connections>
+                        <action selector="swipeFromRight:" destination="BYZ-38-t0r" id="lRe-D3-G4Q"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="gnm-C1-8KN">
+                    <connections>
+                        <action selector="swipePicture:" destination="BYZ-38-t0r" id="DOw-Wk-eXX"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
